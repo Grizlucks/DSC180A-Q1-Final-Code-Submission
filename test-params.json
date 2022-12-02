@@ -1,4 +1,4 @@
 {
     "inpath": "test/testdata/",
-    "outpath": "test/testout/"
+    "outpath": "test/out/"
 }

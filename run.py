@@ -3,7 +3,7 @@
 import sys
 import json
 
-from etl import get_data
+from src.data.etl import get_data
 
 def main(targets):
     if 'test' in targets:
