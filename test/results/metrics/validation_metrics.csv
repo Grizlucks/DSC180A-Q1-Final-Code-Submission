@@ -1,0 +1,7 @@
+,Validation Base Logistic Regression,Validation Base Random Forest,Validation Reweighted Logistic Regression,Validation Reweighted Random Forest,Validation Prejudice Remover,Validation Reject Options Classifier + Logistic Regression,Validation Reject Options Classifier + Random Forest
+bal_acc,0.75,0.5,0.75,0.5,1.0,0.5,0.5
+avg_odds_diff,,,,,,,
+disp_imp,0.5,1.0,0.5,1.0,0.0,1.0,1.0
+stat_par_diff,-0.5,0.0,-0.5,0.0,-1.0,0.0,0.0
+eq_opp_diff,,,,,,,
+theil_ind,0.05889151782819172,0.04369212068196554,0.05889151782819172,0.04369212068196554,0.0,0.04369212068196554,0.04369212068196554
