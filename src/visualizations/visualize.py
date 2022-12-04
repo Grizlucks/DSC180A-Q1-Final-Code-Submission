@@ -80,9 +80,7 @@ def create_visualizations(inpath, outpath):
     df_19 = pd.read_csv(f"{outpath}/df_panel_19.csv")
     # read df 20 from inpath
     df_20 = pd.read_csv(f"{outpath}/df_panel_20.csv")
-
-    high_ch = df_19[df_19['CHOLDX'] == 1]
-    coronary = df_19[df_19['CHDDX'] == 1]
+    
 
     race = df_19['RACE']
 
@@ -101,14 +99,18 @@ def create_visualizations(inpath, outpath):
     plt.close()
 
     # High Cholesterol Pressure by Age
-    high_ch.groupby(by="AGE").size().plot(
-        kind='line', title='High Cholesterol Pressure by Age')
+    binary_df_19 = df_19.copy()
+    
+    binary_df_19.loc[binary_df_19['CHOLDX'] != 1, 'CHOLDX'] = 0
+    binary_df_19.groupby('AGE')['CHOLDX'].mean().plot(title='Coronary Heart Disease by Age')
     plt.savefig('test/results/visualizations/cholesterol_by_age.jpg')
     plt.close()
 
     # Coronary Heart Disease by Age
-    coronary.groupby(by="AGE").size().plot(
-        kind='line', title='Coronary Heart Disease by Age')
+    binary_df_19 = df_19.copy()
+    
+    binary_df_19.loc[binary_df_19['CHDDX'] != 1, 'CHDDX'] = 0
+    binary_df_19.groupby('AGE')['CHDDX'].mean().plot(title='Coronary Heart Disease by Age')
     plt.savefig('test/results/visualizations/heart_disease_by_age.jpg')
     plt.close()
 
