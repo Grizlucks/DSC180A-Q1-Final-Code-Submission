@@ -12,6 +12,8 @@ Contains holistic .ipynb that was used to replicate a bias mitigation project an
 
 ## references/
 
+PDF that describes the features in the MEPS dataset.
+
 ## src/
 
 ### data/
