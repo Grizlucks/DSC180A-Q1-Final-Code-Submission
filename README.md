@@ -1,6 +1,14 @@
-# DSC180A-Methodology-5
+# DSC180A-Final-Code-Submission
 
-Learn bias mitigation techniques using the Medical Expenditure data
+Learning bias mitigation techniques using the medical expenditure data
+
+# Instructions for obtaining raw data
+
+Follow this link (https://www.kaggle.com/datasets/nanrahman/mepsdata?select=h181.csv) to kaggle.com, download the raw data (h181.csv only) and store it in the /data/raw directory with the filename 'rawdata.csv'.
+
+# Instructions for running scripts
+
+Call 'python run.py test' to run the project using test data, and 'python run.py' to run the project using the raw data once it has been downloaded. 
 
 # run.py
 
@@ -15,6 +23,8 @@ Contains holistic .ipynb that was used to replicate a bias mitigation project an
 PDF that describes the features in the MEPS dataset.
 
 ## src/
+
+Contains all source code and following directories:
 
 ### data/
 
@@ -34,11 +44,11 @@ Creates correlation plots (including race vs insurance and age vs diseases) as w
 
 ## test/
 
+Contains test target and following directories:
+
 ### out/
 
-Output after running data preprocessing and feature creation.
-
-### results/
+Output after running data preprocessing and feature creation, as well as results from the model itself:
 
 #### metrics/
 
@@ -51,3 +61,25 @@ Plots created after running visualization script.
 ### testdata/
 
 Test dataset sampled from larger Medical Expenditure Data.
+
+## data/
+
+Contains data target and resulting analyses:
+
+### out/
+
+Output after running data preprocessing and feature creation, as well as results from the model itself:
+
+#### metrics/
+
+Metrics after training various models on the dataset.
+
+#### visualizations/
+
+Plots created after running visualization script.
+
+### raw/
+
+Directory for storage of raw data.
+
+

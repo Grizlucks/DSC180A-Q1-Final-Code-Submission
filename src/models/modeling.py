@@ -211,6 +211,6 @@ def perform_modeling(inpath, outpath):
 	         RW_lr_test_metric_arrs_20, RW_rf_test_metric_arrs_20, 
 	         pr_test_metric_arrs_20, roc_lr_test_metric_arrs_20, roc_rf_test_metric_arrs_20])
 
-	create_df(lst1).to_csv("test/results/metrics/validation_metrics.csv")
-	create_df(lst2).to_csv("test/results/metrics/test_metrics_19.csv")
-	create_df(lst3).to_csv("test/results/metrics/test_metrics_20.csv")
+	create_df(lst1).to_csv(outpath+"metrics/validation_metrics.csv")
+	create_df(lst2).to_csv(outpath+"metrics/test_metrics_19.csv")
+	create_df(lst3).to_csv(outpath+"metrics/test_metrics_20.csv")
